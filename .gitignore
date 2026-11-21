@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.sites-local/
+*.log
+public/pdf-assets/

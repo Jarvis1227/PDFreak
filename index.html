@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101f26" />
+  <meta name="description" content="Turn a PDF into a Word document, directly in your browser. No file uploads, accounts, or conversion fees." />
+  <title>PDFreak · PDF to Word</title>
+</head>
+<body>
+  <header class="topbar wrap">
+    <a class="brand" href="/" aria-label="PDFreak home"><span class="brand-mark">P<span>!</span></span>PDFreak<span class="brand-tag">DOCUMENT TOOLS</span></a>
+    <a href="#how-it-works" class="nav-link">How it works</a>
+    <span class="local-badge"><i data-icon="shield"></i> Files stay on your device</span>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow"><span></span> A LITTLE LESS PDF. A LOT MORE POSSIBILITY.</p>
+      <h1>Locked in a PDF?<br>Make it <em>editable.</em></h1>
+      <p class="hero-copy">Your words deserve a little room to move.<br class="desktop-break"> Turn a PDF into a Word document, right in your browser.</p>
+      <div class="hero-art" aria-hidden="true"><div class="orbit"></div><div class="paper paper-back"><span class="paper-format">PDF</span><b></b><b></b><b></b><div class="paper-lines"></div></div><div class="transfer"><i data-icon="swap"></i></div><div class="paper paper-front"><span class="paper-format">W</span><b></b><b></b><b></b><div class="paper-lines"></div><span class="paper-cursor"></span></div><span class="art-caption">SAME WORDS. NEW POSSIBILITIES.</span></div>
+    </section>
+    <section class="workspace" aria-label="PDF to Word converter">
+      <div class="workspace-heading"><div><span class="tool-icon"><i data-icon="files"></i></span><h2>PDF to Word</h2><span class="extension">.pdf <span>/</span> .docx</span></div><span class="free-badge">Always free</span></div>
+      <div class="workspace-grid">
+        <div class="controls">
+          <div id="dropzone" class="dropzone">
+            <div class="upload-icon"><i data-icon="upload"></i></div>
+            <h3>Drop your PDF here</h3><p>or choose one from your device</p>
+            <label class="choose-button" for="file-input"><i data-icon="plus"></i> Choose PDF</label>
+            <input id="file-input" class="visually-hidden" type="file" accept="application/pdf,.pdf" />
+            <small>PDF files up to 25 MB</small>
+          </div>
+          <div id="file-card" class="file-card" hidden><div class="file-badge">PDF</div><div class="file-info"><strong id="file-name"></strong><span id="file-meta"></span></div><button id="remove-file" class="icon-button" aria-label="Remove PDF"><i data-icon="close"></i></button></div>
+          <div id="file-error" class="notice error" role="alert" hidden></div>
+          <div class="sample-row" id="sample-row"><span>Just looking around?</span><button id="sample-button" class="text-button">Try a sample PDF</button></div>
+          <fieldset class="mode-field"><legend>Conversion style</legend><div class="mode-options"><label class="mode-option"><input type="radio" name="mode" value="editable" checked /><span class="mode-graphic"><i data-icon="type"></i></span><span><strong>Editable text</strong><small>Change words in Word</small></span><span class="radio-indicator"></span></label><label class="mode-option"><input type="radio" name="mode" value="appearance" /><span class="mode-graphic"><i data-icon="image"></i></span><span><strong>Exact appearance</strong><small>Pages saved as images</small></span><span class="radio-indicator"></span></label></div></fieldset>
+          <p id="mode-note" class="mode-note">Keeps text, font sizes, and page breaks. Complex columns, tables, and images may need adjustment.</p>
+          <div class="pages-setting"><label for="page-range">Pages to convert</label><input id="page-range" type="text" placeholder="All pages" autocomplete="off" spellcheck="false" aria-describedby="range-hint" /><span id="range-hint">Leave blank for all pages, or enter 1-3, 5. Up to 60 pages.</span></div>
+          <div id="conversion-progress" class="conversion-progress" hidden><div><span id="progress-message">Preparing your document</span><button id="cancel-button" class="text-button">Cancel</button></div><progress id="progress-bar" max="100" value="0"></progress></div>
+          <div id="conversion-result" class="notice success" role="status" hidden></div>
+          <button id="convert-button" class="convert-button" disabled><i data-icon="word"></i><span>Convert to Word</span></button>
+          <p class="conversion-footnote"><i data-icon="lock"></i> No upload. No sign-up. Just your document.</p>
+        </div>
+        <aside class="preview-pane" aria-label="Document preview"><div class="preview-heading"><span>DOCUMENT PREVIEW</span><span id="preview-count">No file selected</span></div><div class="preview-stage"><div id="empty-preview" class="empty-preview"><div class="empty-paper"><i data-icon="file"></i><div></div><div></div><div></div><div></div></div><h3>A fresh start for your document</h3><p>Choose a PDF to take a peek inside.</p></div><canvas id="preview-canvas" hidden aria-label="PDF page preview"></canvas><span id="preview-loading" class="preview-loading" hidden>Opening PDF…</span></div><div class="preview-footer"><span id="preview-description">Your document, your device.</span><div id="preview-navigation" class="preview-navigation" hidden><button id="previous-page" class="icon-button" aria-label="Previous preview page"><i data-icon="chevron-left"></i></button><span id="preview-position"></span><button id="next-page" class="icon-button" aria-label="Next preview page"><i data-icon="chevron-right"></i></button></div></div></aside>
+      </div>
+    </section>
+    <section id="how-it-works" class="benefits" aria-label="How it works"><article><span class="benefit-icon"><i data-icon="file"></i></span><h3>Pick your PDF</h3><p>A report, a letter, that document you need to update. Start with a file or try our sample.</p></article><article><span class="benefit-icon"><i data-icon="tune"></i></span><h3>Make it your own</h3><p>Choose editable text or keep the exact appearance. Convert every page or just a few.</p></article><article><span class="benefit-icon"><i data-icon="download"></i></span><h3>Keep moving</h3><p>Download your .docx and open it in Word or Google Docs. Ready for your next chapter.</p></article></section>
+    <section class="good-to-know"><div><p class="eyebrow">GOOD TO KNOW</p><h2>A few small details.<br>No big surprises.</h2></div><div class="faq"><details><summary>Do my files leave my device?<i data-icon="plus"></i></summary><p>No. The PDF is read and the Word file is created entirely in this browser tab. We don't upload or store your document. Closing the tab clears it from the converter.</p></details><details><summary>What happens to the formatting?<i data-icon="plus"></i></summary><p>Editable text mode preserves text, approximate font sizing, and page boundaries. It does not recreate images, tables, or complex multi-column layouts. Exact appearance mode renders pages as images inside Word, preserving the look but making the words uneditable.</p></details><details><summary>Can I convert a scanned PDF?<i data-icon="plus"></i></summary><p>Use exact appearance mode to put scanned pages into Word as images. This version does not perform OCR, so it cannot turn a scan into editable text. Pages without a text layer are flagged before an editable export finishes.</p></details><details><summary>What about password-protected PDFs?<i data-icon="plus"></i></summary><p>If the PDF needs a password to open, we'll ask for it. The password is only used in your current browser session. Conversion respects the PDF's content extraction permissions.</p></details></div></section>
+  </main>
+  <footer class="wrap footer"><a class="brand" href="/">PDFreak<span class="brand-period">.</span></a><p>Less friction. More creating.</p><span>Made for the little things that move work forward.</span></footer>
+  <dialog id="password-dialog"><form id="password-form"><span class="dialog-icon"><i data-icon="lock"></i></span><h2>This PDF is protected</h2><p id="password-prompt">Enter its opening password to continue.</p><label for="pdf-password">PDF password</label><input id="pdf-password" type="password" autocomplete="off" required /><div class="dialog-actions"><button type="button" id="password-cancel" class="secondary-button">Cancel</button><button class="choose-button" type="submit">Open PDF</button></div></form></dialog>
+  <div id="status" class="visually-hidden" aria-live="polite"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
